@@ -1,5 +1,8 @@
 # Z80 Optimized (and/or Useful) Routines
 
+{Work in Progress: Updating to work with the Agon Light and the agon-ez80asm assembler}
+
+
 This is a repository of routines for the Z80!
 As of its inception, it will likely be expanded with the Z80 TI8x series of calculators in mind, but most routines should be general enough for other devices.
 
