@@ -12,9 +12,9 @@ L_To_BCD:
     add hl,hl
     add hl,hl
     add hl,hl
-    ld a,h \ daa  \ rl l
-    adc a,a \ daa \ rl l
-    adc a,a \ daa \ rl l
-    adc a,a \ daa \ rl l
-    adc a,a \ daa \ rl l
+    ld a,h	daa 	rl l
+    adc a,a	daa	rl l
+    adc a,a	daa	rl l
+    adc a,a	daa	rl l
+    adc a,a	daa	rl l
     ret

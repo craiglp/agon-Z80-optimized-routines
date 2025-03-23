@@ -25,10 +25,10 @@ div_32_32:
 
 ;negate BCDE
   xor a
-  ld l,a \ sbc a,e \ ld e,a
-  ld a,l \ sbc a,d \ ld d,a
-  ld a,l \ sbc a,c \ ld c,a
-  ld a,l \ sbc a,b \ ld b,a
+  ld l,a	sbc a,e	ld e,a
+  ld a,l	sbc a,d	ld d,a
+  ld a,l	sbc a,c	ld c,a
+  ld a,l	sbc a,b	ld b,a
 
   ld a,h
 ;set HLIX to 0

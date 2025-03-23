@@ -13,9 +13,9 @@ sqrtHLIX:
   rl d
 
   ld a,ixh
-  sll e \ rl d
-  add a,a \ adc hl,hl
-  add a,a \ adc hl,hl
+  sll e    rl d
+  add a,a    adc hl,hl
+  add a,a    adc hl,hl
   sbc hl,de
   jr nc,+_
   add hl,de
@@ -24,9 +24,9 @@ sqrtHLIX:
 _:
   inc e
 
-  sll e \ rl d
-  add a,a \ adc hl,hl
-  add a,a \ adc hl,hl
+  sll e    rl d
+  add a,a    adc hl,hl
+  add a,a    adc hl,hl
   sbc hl,de
   jr nc,+_
   add hl,de
@@ -35,9 +35,9 @@ _:
 _:
   inc e
 
-  sll e \ rl d
-  add a,a \ adc hl,hl
-  add a,a \ adc hl,hl
+  sll e    rl d
+  add a,a    adc hl,hl
+  add a,a    adc hl,hl
   sbc hl,de
   jr nc,+_
   add hl,de
@@ -46,9 +46,9 @@ _:
 _:
   inc e
 
-  sll e \ rl d
-  add a,a \ adc hl,hl
-  add a,a \ adc hl,hl
+  sll e    rl d
+  add a,a    adc hl,hl
+  add a,a    adc hl,hl
   sbc hl,de
   jr nc,+_
   add hl,de
@@ -60,9 +60,9 @@ _:
 ;Now we have four more iterations
 ;The first two are no problem
   ld a,ixl
-  sll e \ rl d
-  add a,a \ adc hl,hl
-  add a,a \ adc hl,hl
+  sll e    rl d
+  add a,a    adc hl,hl
+  add a,a    adc hl,hl
   sbc hl,de
   jr nc,+_
   add hl,de
@@ -71,9 +71,9 @@ _:
 _:
   inc e
 
-  sll e \ rl d
-  add a,a \ adc hl,hl
-  add a,a \ adc hl,hl
+  sll e    rl d
+  add a,a    adc hl,hl
+  add a,a    adc hl,hl
   sbc hl,de
   jr nc,+_
   add hl,de
@@ -84,7 +84,7 @@ _:
 
 sqrt32_iter15:
 ;On the next iteration, HL might temporarily overflow by 1 bit
-  sll e \ rl d      ;sla e \ rl d \ inc e
+  sll e    rl d      ;sla e    rl d    inc e
   add a,a
   adc hl,hl
   add a,a
@@ -111,10 +111,10 @@ sqrt32_iter16:
   adc hl,hl
   rla
 ;AHL - (DE+DE+1)
-  sbc hl,de \ sbc a,b
+  sbc hl,de    sbc a,b
   inc e
   or a
-  sbc hl,de \ sbc a,b
+  sbc hl,de    sbc a,b
   ret p
   add hl,de
   adc a,b

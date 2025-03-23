@@ -28,19 +28,19 @@ uitoa_8:
 ;A is on [0,255]
 ;calculate 100s place, plus 1 for a future calculation
   ld b,'0'
-  cp 100 \ jr c,$+5 \ sub 100 \ inc b
-  cp 100 \ jr c,$+5 \ sub 100 \ inc b
+  cp 100	jr c,$+5	sub 100	inc b
+  cp 100	jr c,$+5	sub 100	inc b
 
 ;calculate 10s place digit, +1 for future calculation
   ld de,$0A2F
-  inc e \ sub d \ jr nc,$-2
+  inc e	sub d	jr nc,$-2
   ld c,a
 
 ;Digits are now in D, C, A
 ; strip leading zeros!
   ld a,'0'
-  cp b \ jr z,$+5 \ ld (hl),b \ inc hl \ .db $FE  ; start of `cp *` to skip the next byte, turns into `cp $BB` which will always return nz and nc
-  cp e \ jr z,$+4 \ ld (hl),e \ inc hl
+  cp b	jr z,$+5	ld (hl),b	inc hl	.db $FE  ; start of `cp *` to skip the next byte, turns into `cp $BB` which will always return nz and nc
+  cp e	jr z,$+4	ld (hl),e	inc hl
   add a,c
   add a,d
   ld (hl),a

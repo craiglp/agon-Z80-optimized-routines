@@ -35,10 +35,10 @@ sqrt32_iter16:
   adc hl,hl
   rla
 ;AHL - (DE+DE+1)
-  sbc hl,de \ sbc a,b
+  sbc hl,de    sbc a,b
   inc e
   or a
-  sbc hl,de \ sbc a,b
+  sbc hl,de    sbc a,b
   ret p
   add hl,de
   adc a,b
@@ -58,9 +58,9 @@ _:
 ;max: 107cc
 ;avg: 95.5cc
 
-  sll e \ rl d
-  add a,a \ adc hl,hl
-  add a,a \ adc hl,hl
+  sll e    rl d
+  add a,a    adc hl,hl
+  add a,a    adc hl,hl
 
   sbc hl,de
   inc e
@@ -76,7 +76,7 @@ sqrt32_iter15:
 ;max: 114cc
 ;avg: 100.75cc
 
-  sll e \ rl d      ;sla e \ rl d \ inc e
+  sll e    rl d      ;sla e    rl d    inc e
   add a,a
   adc hl,hl
   add a,a

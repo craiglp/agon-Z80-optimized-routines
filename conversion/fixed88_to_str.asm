@@ -78,9 +78,13 @@ fixed88_to_str_end:
 fixed88_to_str_e_times_10:
   ld a,e
   ld d,0
-  add a,a \ rl d
-  add a,a \ rl d
-  add a,e \ jr nc,$+3 \ inc d
+  add a,a
+  rl d
+  add a,a
+  rl d
+  add a,e
+  jr nc,$+3
+  inc d
   add a,a
   ld e,a
   ld a,d

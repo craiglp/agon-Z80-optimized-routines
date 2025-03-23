@@ -3,19 +3,19 @@ isDivisible:
 ;Outputs: c flag set if HL is not divisible by DE, else c flag is reset.
 ;         HL is 0 if true.
 ;See below for a note on the motivation and development of this algorithm.
-    ld a,d \ or e \ ccf \ ret z         ;remove this if DE is always guaranteed non-zero
+    ld a,d    or e    ccf    ret z         ;remove this if DE is always guaranteed non-zero
 ;step 1
-    ld a,e \ or l \ rra \ jr c,step2    ;\
-    srl d \ rr e \ rr h \ rr l          ; |
-    ld a,e \ or l \ rra \ jr nc,$-11    ; |Remove these if DE is always guaranteed odd at input.
+    ld a,e    or l    rra    jr c,step2    ;\
+    srl d    rr e    rr h    rr l          ; |
+    ld a,e    or l    rra    jr nc,$-11    ; |Remove these if DE is always guaranteed odd at input.
 step2:                                  ; |
-    ld a,e \ rra \ ccf \ ret c          ;/
+    ld a,e    rra    ccf    ret c          ;/
 ;steps 3, 4, and 5
     ld a,l
     or a
 loop:
-    sbc hl,de \ ret c \ ret z
-    rr h \ rra \ bit 0,a \ jr z,$-5
+    sbc hl,de    ret c    ret z
+    rr h    rra    bit 0,a    jr z,$-5
     ld l,a
     jp loop
 ;Motivation and Development

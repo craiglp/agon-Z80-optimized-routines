@@ -11,12 +11,12 @@ lognat:
 ;Size: 177 bytes
 ;Speed: average speed is less than 1250 t-states
 
-   ld a,h \ or l \ jr nz,$+5
-   ld h,80h \ ret
+   ld a,h    or l    jr nz,$+5
+   ld h,80h    ret
    dec h
    dec h
    jr nz,$+9
-   inc l \ dec l
+   inc l    dec l
    jr nz,normalizeln-1
    ld l,177
    ret
@@ -31,15 +31,15 @@ lognat:
    add hl,de
    ex de,hl
    call HL_Div_DE
-   ld h,a \ ld l,b
-   sla h \ jr c,$+3 \ ld l,c
-   add hl,hl \ jr c,$+3 \ add hl,bc
-   add hl,hl \ jr c,$+3 \ add hl,bc
-   add hl,hl \ jr c,$+3 \ add hl,bc
-   add hl,hl \ jr c,$+3 \ add hl,bc
-   add hl,hl \ jr c,$+3 \ add hl,bc
-   add hl,hl \ jr c,$+3 \ add hl,bc
-   add hl,hl \ jr c,$+3 \ add hl,bc
+   ld h,a    ld l,b
+   sla h    jr c,$+3    ld l,c
+   add hl,hl    jr c,$+3    add hl,bc
+   add hl,hl    jr c,$+3    add hl,bc
+   add hl,hl    jr c,$+3    add hl,bc
+   add hl,hl    jr c,$+3    add hl,bc
+   add hl,hl    jr c,$+3    add hl,bc
+   add hl,hl    jr c,$+3    add hl,bc
+   add hl,hl    jr c,$+3    add hl,bc
    rl l
    ld a,h
    adc a,b
@@ -48,24 +48,24 @@ lognat:
    scf
    ret
 HL_Div_DE:
-   add hl,hl \ sbc hl,de \ jr nc,$+3 \ add hl,de \ adc a,a
-   add hl,hl \ sbc hl,de \ jr nc,$+3 \ add hl,de \ adc a,a
-   add hl,hl \ sbc hl,de \ jr nc,$+3 \ add hl,de \ adc a,a
-   add hl,hl \ sbc hl,de \ jr nc,$+3 \ add hl,de \ adc a,a
-   add hl,hl \ sbc hl,de \ jr nc,$+3 \ add hl,de \ adc a,a
-   add hl,hl \ sbc hl,de \ jr nc,$+3 \ add hl,de \ adc a,a
-   add hl,hl \ sbc hl,de \ jr nc,$+3 \ add hl,de \ adc a,a
-   add hl,hl \ sbc hl,de \ adc a,a \ ret
+   add hl,hl    sbc hl,de    jr nc,$+3    add hl,de    adc a,a
+   add hl,hl    sbc hl,de    jr nc,$+3    add hl,de    adc a,a
+   add hl,hl    sbc hl,de    jr nc,$+3    add hl,de    adc a,a
+   add hl,hl    sbc hl,de    jr nc,$+3    add hl,de    adc a,a
+   add hl,hl    sbc hl,de    jr nc,$+3    add hl,de    adc a,a
+   add hl,hl    sbc hl,de    jr nc,$+3    add hl,de    adc a,a
+   add hl,hl    sbc hl,de    jr nc,$+3    add hl,de    adc a,a
+   add hl,hl    sbc hl,de    adc a,a    ret
 
    inc h
 normalizeln:
    xor a
-   inc h \ ret m
-   ld d,a \ ld e,a
+   inc h    ret m
+   ld d,a    ld e,a
    ld a,l
    jr z,toosmall
-   inc e \ srl h \ rra \ jr nz,$-4
-   rla \ rl h
+   inc e    srl h    rra    jr nz,$-4
+   rla    rl h
    dec e
 stepin:
    ld l,a
@@ -73,7 +73,7 @@ stepin:
    call lognat
    pop de
    ;now multiply DE by 355, then divide by 2 (rounding)
-   ld b,d \ ld c,e \ ld a,d
+   ld b,d    ld c,e    ld a,d
    ex de,hl
    add hl,hl
    add hl,hl   ;4
@@ -87,12 +87,12 @@ stepin:
    add hl,bc
    add hl,hl
    add hl,bc
-   sra h \ rr l
+   sra h    rr l
    adc hl,de
    scf
    ret
 toosmall:
    dec d
-   dec e \ add a,a \ jr nc,$-2
+   dec e    add a,a    jr nc,$-2
    inc h
    jp stepin

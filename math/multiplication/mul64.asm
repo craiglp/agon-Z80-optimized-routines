@@ -57,10 +57,10 @@ z32_0 = z64_2+8
   ld bc,(inp64_1+6)
   sbc hl,bc
   jr nc,+_
-  ld b,a \ sub e \ ld e,a
-  ld a,b \ sbc a,d \ ld d,a
-  ld a,b \ sbc a,l \ ld l,a
-  ld a,b \ sbc a,h \ ld h,a
+  ld b,a     sub e     ld e,a
+  ld a,b     sbc a,d     ld d,a
+  ld a,b     sbc a,l     ld l,a
+  ld a,b     sbc a,h     ld h,a
   ld a,b
 _:
   rla
@@ -78,10 +78,10 @@ _:
   ld c,a
   xor a
   ld b,a
-  sub e \ ld e,a
-  ld a,b \ sbc a,d \ ld d,a
-  ld a,b \ sbc a,l \ ld l,a
-  ld a,b \ sbc a,h \ ld h,a
+  sub e     ld e,a
+  ld a,b     sbc a,d     ld d,a
+  ld a,b     sbc a,l     ld l,a
+  ld a,b     sbc a,h     ld h,a
   ld a,c
   inc a
 _:
@@ -153,9 +153,9 @@ mul64_final:
   adc a,(hl)
   ld (hl),a
   ret nc
-  inc hl \ inc (hl) \ ret nz
-  inc hl \ inc (hl) \ ret nz
-  inc hl \ inc (hl) \ ret
+  inc hl     inc (hl)     ret nz
+  inc hl     inc (hl)     ret nz
+  inc hl     inc (hl)     ret
 mul64_add:
 ;add to the current result
 ;z0+z2+result

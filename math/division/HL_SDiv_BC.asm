@@ -23,20 +23,20 @@ HL_SDiv_BC:
 absHL:
      add hl,hl
      jr nc,negabsBC
-     xor a \ sub l \ ld l,a
-     sbc a,a \ sub h \ ld h,a
+     xor a	sub l	ld l,a
+     sbc a,a	sub h	ld h,a
 negabsBC:
      bit 7,b
      jr nz,$+8
-     xor a \ sub c \ ld c,a
-     sbc a,a \ sub b \ ld b,a
+     xor a	sub c	ld c,a
+     sbc a,a	sub b	ld b,a
        ex de,hl
        xor a
        ld h,a
        ld l,a
        ld a,15
 Div_Loop_1:
-         rl e \ rl d
+         rl e	rl d
          adc hl,hl
          add hl,bc
          jr c,$+4
@@ -45,7 +45,7 @@ Div_Loop_1:
          jr nz,Div_Loop_1
        ex de,hl
        adc hl,hl
-       pop af \ ret p
-     xor a \ sub l \ ld l,a
-     sbc a,a \ sub h \ ld h,a
+       pop af	ret p
+     xor a	sub l	ld l,a
+     sbc a,a	sub h	ld h,a
      ret

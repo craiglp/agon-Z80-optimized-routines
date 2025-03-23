@@ -13,8 +13,8 @@ seed1_1=$+1
     ld de,6789
     ld b,h
     ld c,l
-    add hl,hl \ rl e \ rl d
-    add hl,hl \ rl e \ rl d
+    add hl,hl    rl e    rl d
+    add hl,hl    rl e    rl d
     inc l
     add hl,bc
     ld (seed1_0),hl
@@ -27,7 +27,7 @@ seed2_0=$+1
     ld hl,9876
 seed2_1=$+1
     ld bc,54321
-    add hl,hl \ rl c \ rl b
+    add hl,hl    rl c    rl b
     ld (seed2_1),bc
     sbc a,a
     and %11000101

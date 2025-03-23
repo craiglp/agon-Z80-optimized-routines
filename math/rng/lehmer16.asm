@@ -23,12 +23,12 @@ seed = $+1
     ld c,l
     ld b,h
     xor a
-    adc hl,hl \ jr z,special \ ld d,a \ rla
-    add hl,hl \ rla
-    add hl,hl \ rla \ add hl,bc \ adc a,d
-    add hl,hl \ rla
-    add hl,hl \ rla \ add hl,bc \ adc a,d
-    add hl,hl \ rla \ add hl,bc
+    adc hl,hl    jr z,special    ld d,a    rla
+    add hl,hl    rla
+    add hl,hl    rla    add hl,bc    adc a,d
+    add hl,hl    rla
+    add hl,hl    rla    add hl,bc    adc a,d
+    add hl,hl    rla    add hl,bc
 ;modulo 65537, see note below on how this works
     ld e,a
     sbc hl,de       ;No need to reset the c flag since it is already

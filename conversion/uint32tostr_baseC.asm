@@ -40,7 +40,7 @@ _:
     dec ix
     ld (ix),a
     ld a,h
-    or l \ or d \ or e
+    or l	or d	or e
     jr nz,uint32tostr
     push ix
     pop hl

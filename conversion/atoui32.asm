@@ -20,12 +20,17 @@ _:
   ld b,ixh
   ld c,ixl
   push hl
-  add ix,ix \ adc hl,hl
-  add ix,ix \ adc hl,hl
+  add ix,ix
+  adc hl,hl
+  add ix,ix
+  adc hl,hl
   inc ix
   dec ix 
-  add ix,bc \ pop bc \ adc hl,bc
-  add ix,ix \ adc hl,hl
+  add ix,bc
+  pop bc
+  adc hl,bc
+  add ix,ix
+  adc hl,hl
   add a,ixl
   ld ixl,a
   jr nc,atoui16_start

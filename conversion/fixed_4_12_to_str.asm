@@ -94,10 +94,14 @@ fixed_4_12_to_str_de_times_10:
   xor a
   ld h,d
   ld l,e
-  add hl,hl \ rla
-  add hl,hl \ rla
-  add hl,de \ adc a,$18     ; half of '0'
-  add hl,hl \ rla
+  add hl,hl
+  rla
+  add hl,hl
+  rla
+  add hl,de
+  adc a,$18     ; half of '0'
+  add hl,hl
+  rla
   ex de,hl
   pop hl
   ret

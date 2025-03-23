@@ -24,11 +24,11 @@ atan8:
   ex de,hl
   ld d,l
   ld e,a
-  sla h \ jr nc,$+3 \ ld l,e
-  add hl,hl \ jr nc,$+3 \ add hl,de
-  add hl,hl \ jr nc,$+3 \ add hl,de
-  add hl,hl \ jr nc,$+3 \ add hl,de
-  add hl,hl \ jr nc,$+3 \ add hl,de
+  sla h    jr nc,$+3    ld l,e
+  add hl,hl    jr nc,$+3    add hl,de
+  add hl,hl    jr nc,$+3    add hl,de
+  add hl,hl    jr nc,$+3    add hl,de
+  add hl,hl    jr nc,$+3    add hl,de
   add hl,hl
   add hl,hl
   add hl,hl

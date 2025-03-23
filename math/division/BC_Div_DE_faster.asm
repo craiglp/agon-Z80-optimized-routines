@@ -15,26 +15,26 @@ BC_Div_DE:
   ld d,a
 
   ld a,b
-  rla \ adc hl,hl \ add hl,de \ jr c,$+4 \ sbc hl,de
-  rla \ adc hl,hl \ add hl,de \ jr c,$+4 \ sbc hl,de
-  rla \ adc hl,hl \ add hl,de \ jr c,$+4 \ sbc hl,de
-  rla \ adc hl,hl \ add hl,de \ jr c,$+4 \ sbc hl,de
-  rla \ adc hl,hl \ add hl,de \ jr c,$+4 \ sbc hl,de
-  rla \ adc hl,hl \ add hl,de \ jr c,$+4 \ sbc hl,de
-  rla \ adc hl,hl \ add hl,de \ jr c,$+4 \ sbc hl,de
-  rla \ adc hl,hl \ add hl,de \ jr c,$+4 \ sbc hl,de
+  rla	adc hl,hl	add hl,de	jr c,$+4	sbc hl,de
+  rla	adc hl,hl	add hl,de	jr c,$+4	sbc hl,de
+  rla	adc hl,hl	add hl,de	jr c,$+4	sbc hl,de
+  rla	adc hl,hl	add hl,de	jr c,$+4	sbc hl,de
+  rla	adc hl,hl	add hl,de	jr c,$+4	sbc hl,de
+  rla	adc hl,hl	add hl,de	jr c,$+4	sbc hl,de
+  rla	adc hl,hl	add hl,de	jr c,$+4	sbc hl,de
+  rla	adc hl,hl	add hl,de	jr c,$+4	sbc hl,de
   rla
   ld b,a
 
   ld a,c
-  rla \ adc hl,hl \ add hl,de \ jr c,$+4 \ sbc hl,de
-  rla \ adc hl,hl \ add hl,de \ jr c,$+4 \ sbc hl,de
-  rla \ adc hl,hl \ add hl,de \ jr c,$+4 \ sbc hl,de
-  rla \ adc hl,hl \ add hl,de \ jr c,$+4 \ sbc hl,de
-  rla \ adc hl,hl \ add hl,de \ jr c,$+4 \ sbc hl,de
-  rla \ adc hl,hl \ add hl,de \ jr c,$+4 \ sbc hl,de
-  rla \ adc hl,hl \ add hl,de \ jr c,$+4 \ sbc hl,de
-  rla \ adc hl,hl \ add hl,de \ jr c,$+4 \ sbc hl,de
+  rla	adc hl,hl	add hl,de	jr c,$+4	sbc hl,de
+  rla	adc hl,hl	add hl,de	jr c,$+4	sbc hl,de
+  rla	adc hl,hl	add hl,de	jr c,$+4	sbc hl,de
+  rla	adc hl,hl	add hl,de	jr c,$+4	sbc hl,de
+  rla	adc hl,hl	add hl,de	jr c,$+4	sbc hl,de
+  rla	adc hl,hl	add hl,de	jr c,$+4	sbc hl,de
+  rla	adc hl,hl	add hl,de	jr c,$+4	sbc hl,de
+  rla	adc hl,hl	add hl,de	jr c,$+4	sbc hl,de
   rla
   ld c,a
 

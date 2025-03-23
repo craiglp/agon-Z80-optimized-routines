@@ -8,28 +8,28 @@ ln_88:
     ld de,0
     bit 7,h
     jr z,$+9
-    dec e \ xor a \ sub l \ ld l,a
-    sbc a,a \ sub h \ ld h,a
+    dec e    xor a    sub l    ld l,a
+    sbc a,a    sub h    ld h,a
     ld b,h
     ld c,l
     xor a
    add hl,hl
-      add hl,hl \ rla
-   add hl,bc \ adc a,d
-   add hl,hl \ rla
-   add hl,bc \ adc a,d
-   add hl,hl \ rla
-   add hl,hl \ rla
-   add hl,hl \ rla
-   add hl,hl \ rla
-   add hl,bc \ adc a,d
-   add hl,hl \ rla
-   add hl,bc \ adc a,d
-    sra a \ rr h
+      add hl,hl    rla
+   add hl,bc    adc a,d
+   add hl,hl    rla
+   add hl,bc    adc a,d
+   add hl,hl    rla
+   add hl,hl    rla
+   add hl,hl    rla
+   add hl,hl    rla
+   add hl,bc    adc a,d
+   add hl,hl    rla
+   add hl,bc    adc a,d
+    sra a    rr h
     ld l,h
     ld h,a
     inc e
     ret nz
-    xor a \ sub l \ ld l,a
-    sbc a,a \ sub h \ ld h,a
+    xor a    sub l    ld l,a
+    sbc a,a    sub h    ld h,a
     ret

@@ -26,26 +26,26 @@ atanE:
   sub e
   ld h,a
   ld l,d
-  sla h \ jr nc,$+3 \ ld l,e
-  add hl,hl \ jr nc,$+3 \ add hl,de
-  add hl,hl \ jr nc,$+3 \ add hl,de
-  add hl,hl \ jr nc,$+3 \ add hl,de
-  add hl,hl \ jr nc,$+3 \ add hl,de
-  add hl,hl \ jr nc,$+3 \ add hl,de
-  add hl,hl \ jr nc,$+3 \ add hl,de
-  add hl,hl \ jr nc,$+3 \ add hl,de
+  sla h    jr nc,$+3    ld l,e
+  add hl,hl    jr nc,$+3    add hl,de
+  add hl,hl    jr nc,$+3    add hl,de
+  add hl,hl    jr nc,$+3    add hl,de
+  add hl,hl    jr nc,$+3    add hl,de
+  add hl,hl    jr nc,$+3    add hl,de
+  add hl,hl    jr nc,$+3    add hl,de
+  add hl,hl    jr nc,$+3    add hl,de
 ;.HL*70
   ld d,h
   ld e,l
   xor a
   add hl,hl
-  add hl,hl \ rla   ;rla needed for the case when input = 128 :(
-  add hl,hl \ rla
-  add hl,hl \ rla
-  add hl,de \ adc a,0
-  add hl,hl \ rla
-  add hl,de \ adc a,0
-  add hl,hl \ rla
+  add hl,hl    rla   ;rla needed for the case when input = 128 :(
+  add hl,hl    rla
+  add hl,hl    rla
+  add hl,de    adc a,0
+  add hl,hl    rla
+  add hl,de    adc a,0
+  add hl,hl    rla
   ld l,h
   ld h,a
   add hl,bc

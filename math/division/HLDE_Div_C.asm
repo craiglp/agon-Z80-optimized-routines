@@ -43,12 +43,12 @@ _:
 ;min: 216cc
 ;max: 231cc
 ;avg: 224.5cc
-  rl h \ rla  \ add a,c \ jr c,$+3 \ sub c
-  rl h \ rla  \ add a,c \ jr c,$+3 \ sub c
-  rl h \ rla  \ add a,c \ jr c,$+3 \ sub c
-  rl h \ rla  \ add a,c \ jr c,$+3 \ sub c
-  rl h \ rla  \ add a,c \ jr c,$+3 \ sub c
-  rl h \ rla  \ add a,c \ jr c,$+3 \ sub c
-  rl h \ rla  \ add a,c \ jr c,$+3 \ sub c
-  rl h \ rla  \ add a,c \ ret c \ sub c
+  rl h	rla 	add a,c	jr c,$+3	sub c
+  rl h	rla 	add a,c	jr c,$+3	sub c
+  rl h	rla 	add a,c	jr c,$+3	sub c
+  rl h	rla 	add a,c	jr c,$+3	sub c
+  rl h	rla 	add a,c	jr c,$+3	sub c
+  rl h	rla 	add a,c	jr c,$+3	sub c
+  rl h	rla 	add a,c	jr c,$+3	sub c
+  rl h	rla 	add a,c	ret c	sub c
   ret

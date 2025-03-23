@@ -19,9 +19,9 @@ sqrtfixed_88:
   sla e
   rl d
 
-  sll e \ rl d
-  add a,a \ adc hl,hl
-  add a,a \ adc hl,hl
+  sll e    rl d
+  add a,a    adc hl,hl
+  add a,a    adc hl,hl
   sbc hl,de
   jr nc,+_
   add hl,de
@@ -30,9 +30,9 @@ sqrtfixed_88:
 _:
   inc e
 
-  sll e \ rl d
-  add a,a \ adc hl,hl
-  add a,a \ adc hl,hl
+  sll e    rl d
+  add a,a    adc hl,hl
+  add a,a    adc hl,hl
   sbc hl,de
   jr nc,+_
   add hl,de
@@ -41,9 +41,9 @@ _:
 _:
   inc e
 
-  sll e \ rl d
-  add a,a \ adc hl,hl
-  add a,a \ adc hl,hl
+  sll e    rl d
+  add a,a    adc hl,hl
+  add a,a    adc hl,hl
   sbc hl,de
   jr nc,+_
   add hl,de
@@ -52,9 +52,9 @@ _:
 _:
   inc e
 
-  sll e \ rl d
-  add a,a \ adc hl,hl
-  add a,a \ adc hl,hl
+  sll e    rl d
+  add a,a    adc hl,hl
+  add a,a    adc hl,hl
   sbc hl,de
   jr nc,+_
   add hl,de
@@ -65,7 +65,7 @@ _:
 
 ;Now we have four more iterations
 ;The first two are no problem
-  sll e \ rl d
+  sll e    rl d
   add hl,hl
   add hl,hl
   sbc hl,de
@@ -76,7 +76,7 @@ _:
 _:
   inc e
 
-  sll e \ rl d
+  sll e    rl d
   add hl,hl
   add hl,hl
   sbc hl,de
@@ -89,7 +89,7 @@ _:
 
 sqrtfixed_88_iter11:
 ;On the next iteration, HL might temporarily overflow by 1 bit
-  sll e \ rl d      ;sla e \ rl d \ inc e
+  sll e    rl d      ;sla e    rl d    inc e
   add hl,hl
   add hl,hl
   jr c,sqrtfixed_88_iter11_br0
@@ -112,10 +112,10 @@ sqrtfixed_88_iter12:
   add hl,hl
   rla
 ;AHL - (DE+DE+1)
-  sbc hl,de \ sbc a,b
+  sbc hl,de    sbc a,b
   inc e
   or a
-  sbc hl,de \ sbc a,b
+  sbc hl,de    sbc a,b
   ret p
   add hl,de
   adc a,b

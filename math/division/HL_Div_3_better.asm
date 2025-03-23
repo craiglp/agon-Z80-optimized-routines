@@ -5,17 +5,17 @@ HL_Div_3:
   ld b,a
   ld d,h
   ld e,l
-  add hl,hl \ rla
-  add hl,hl \ rla
-  add hl,de \ adc a,b
-  add hl,hl \ rla
-  add hl,hl \ rla
-  add hl,de \ adc a,b
-  add hl,hl \ rla
-  add hl,hl \ rla
-  add hl,de \ adc a,b
+  add hl,hl	rla
+  add hl,hl	rla
+  add hl,de	adc a,b
+  add hl,hl	rla
+  add hl,hl	rla
+  add hl,de	adc a,b
+  add hl,hl	rla
+  add hl,hl	rla
+  add hl,de	adc a,b
 ;AHL+(AHL+(DE>>1))/256
-  srl d \ rr e
+  srl d	rr e
 ;AHL+(AHL+DE)/256
 ;AH.L+A.HL+.DE
   ld b,h

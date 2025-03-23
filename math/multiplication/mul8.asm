@@ -9,11 +9,11 @@ mul8:
 ;36 bytes
     ld d,0
     ld l,d
-    sla h \ jr nc,$+3 \ ld l,e
-    add hl,hl \ jr nc,$+3 \ add hl,de
-    add hl,hl \ jr nc,$+3 \ add hl,de
-    add hl,hl \ jr nc,$+3 \ add hl,de
-    add hl,hl \ jr nc,$+3 \ add hl,de
-    add hl,hl \ jr nc,$+3 \ add hl,de
-    add hl,hl \ jr nc,$+3 \ add hl,de
-    add hl,hl \ ret nc \ add hl,de \ ret
+    sla h     jr nc,$+3     ld l,e
+    add hl,hl     jr nc,$+3     add hl,de
+    add hl,hl     jr nc,$+3     add hl,de
+    add hl,hl     jr nc,$+3     add hl,de
+    add hl,hl     jr nc,$+3     add hl,de
+    add hl,hl     jr nc,$+3     add hl,de
+    add hl,hl     jr nc,$+3     add hl,de
+    add hl,hl     ret nc     add hl,de     ret

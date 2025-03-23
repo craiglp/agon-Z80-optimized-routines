@@ -10,16 +10,16 @@ DEHL_Div_10:
 ;49 bytes
     xor a
     ld bc,05F6h
-    rl d \ rla
-    rl d \ rla
-    rl d \ rla
-    rl d \ rla \ add a,c \ jr c,$+3 \ sub c \ djnz $-7
+    rl d	rla
+    rl d	rla
+    rl d	rla
+    rl d	rla	add a,c	jr c,$+3	sub c	djnz $-7
     ld b,8
-    rl e \ rla \ add a,c \ jr c,$+3 \ sub c \ djnz $-7
+    rl e	rla	add a,c	jr c,$+3	sub c	djnz $-7
     ld b,8
-    rl h \ rla \ add a,c \ jr c,$+3 \ sub c \ djnz $-7
+    rl h	rla	add a,c	jr c,$+3	sub c	djnz $-7
     ld b,8
-    rl l \ rla \ add a,c \ jr c,$+3 \ sub c \ djnz $-7
+    rl l	rla	add a,c	jr c,$+3	sub c	djnz $-7
 
     adc hl,hl
     rl e

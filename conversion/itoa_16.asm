@@ -30,25 +30,33 @@ _:
 
   ld bc,-10000
   ld a,'0'-1
-  inc a \ add hl,bc \ jr c,$-2
+  inc a
+  add hl,bc
+  jr c,$-2
   ld (de),a
   inc de
 
   ld bc,1000
   ld a,'9'+1
-  dec a \ add hl,bc \ jr nc,$-2
+  dec a
+  add hl,bc
+  jr nc,$-2
   ld (de),a
   inc de
 
   ld bc,-100
   ld a,'0'-1
-  inc a \ add hl,bc \ jr c,$-2
+  inc a
+  add hl,bc
+  jr c,$-2
   ld (de),a
   inc de
 
   ld a,l
   ld h,'9'+1
-  dec h \ add a,10 \ jr nc,$-3
+  dec h
+  add a,10
+  jr nc,$-3
   add a,'0'
   ex de,hl
   ld (hl),d

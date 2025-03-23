@@ -14,19 +14,19 @@ HL_Div_3:
   ld b,h
   ld c,l
   ld e,a
-  add hl,hl \ rla
-  add hl,hl \ rla
-  add hl,bc \ adc a,e
+  add hl,hl	rla
+  add hl,hl	rla
+  add hl,bc	adc a,e
 
 ;We want a difference of a factor of 4 shifts
   ld b,h
   ld c,l
   ld e,a
-  add hl,hl \ rla
-  add hl,hl \ rla
-  add hl,hl \ rla
-  add hl,hl \ rla
-  add hl,bc \ adc a,e
+  add hl,hl	rla
+  add hl,hl	rla
+  add hl,hl	rla
+  add hl,hl	rla
+  add hl,bc	adc a,e
 
   ld b,a
   ld c,h

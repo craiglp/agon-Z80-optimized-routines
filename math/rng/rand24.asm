@@ -12,10 +12,10 @@ seed1_1=$+1
     ld b,h
     ld c,l
     ld d,a
-    add hl,hl \ rla
-    add hl,hl \ rla
+    add hl,hl    rla
+    add hl,hl    rla
     inc l
-    add hl,bc \ adc a,0
+    add hl,bc    adc a,0
     ld (seed1_0),hl
     ld (seed1_1),a
     ld c,b

@@ -68,10 +68,14 @@ fixed1616_to_str_sub:
   xor a
   ld b,h
   ld c,l
-  add hl,hl \ rla
-  add hl,hl \ rla
-  add hl,bc \ adc a,$18
-  add hl,hl \ rla
+  add hl,hl
+  rla
+  add hl,hl
+  rla
+  add hl,bc
+  adc a,$18
+  add hl,hl
+  rla
   ld (de),a
   inc de
   ret

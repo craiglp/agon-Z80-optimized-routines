@@ -10,7 +10,7 @@ BC_Div_DE:
 
 div_loop:
   ;shift the bits from BC into HL
-  sla c \ rla
+  sla c	rla
   adc hl,hl
   sbc hl,de
   jr nc,div_inc_acc

@@ -24,14 +24,14 @@ BC_Div_DE_sub:
 ;min: 354cc
 ;max: 434cc
 ;avg: 394cc
-  rla \ adc hl,hl \ add hl,de \ jr c,$+4 \ sbc hl,de
-  rla \ adc hl,hl \ add hl,de \ jr c,$+4 \ sbc hl,de
-  rla \ adc hl,hl \ add hl,de \ jr c,$+4 \ sbc hl,de
-  rla \ adc hl,hl \ add hl,de \ jr c,$+4 \ sbc hl,de
-  rla \ adc hl,hl \ add hl,de \ jr c,$+4 \ sbc hl,de
-  rla \ adc hl,hl \ add hl,de \ jr c,$+4 \ sbc hl,de
-  rla \ adc hl,hl \ add hl,de \ jr c,$+4 \ sbc hl,de
-  rla \ adc hl,hl \ add hl,de \ jr c,$+4 \ sbc hl,de
+  rla	adc hl,hl	add hl,de	jr c,$+4	sbc hl,de
+  rla	adc hl,hl	add hl,de	jr c,$+4	sbc hl,de
+  rla	adc hl,hl	add hl,de	jr c,$+4	sbc hl,de
+  rla	adc hl,hl	add hl,de	jr c,$+4	sbc hl,de
+  rla	adc hl,hl	add hl,de	jr c,$+4	sbc hl,de
+  rla	adc hl,hl	add hl,de	jr c,$+4	sbc hl,de
+  rla	adc hl,hl	add hl,de	jr c,$+4	sbc hl,de
+  rla	adc hl,hl	add hl,de	jr c,$+4	sbc hl,de
   rla
   ld c,a
   ret

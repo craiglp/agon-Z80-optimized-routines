@@ -31,7 +31,7 @@ integerpow:
      ret z
 
      add hl,hl
-     rl e \ rl d \ jr c,wayoverflow
+     rl e    rl d    jr c,wayoverflow
      djnz $-7
      ret
 wayoverflow:

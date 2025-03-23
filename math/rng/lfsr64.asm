@@ -1,13 +1,13 @@
 lfsr64:
 ;;Output: A is an 8-bit pseudo-random number.
     ld hl,seed
-    sla (hl) \ inc hl
-    rl (hl) \ inc hl
-    rl (hl) \ inc hl
-    rl (hl) \ inc hl
-    rl (hl) \ inc hl
-    rl (hl) \ inc hl
-    rl (hl) \ inc hl
+    sla (hl)    inc hl
+    rl (hl)    inc hl
+    rl (hl)    inc hl
+    rl (hl)    inc hl
+    rl (hl)    inc hl
+    rl (hl)    inc hl
+    rl (hl)    inc hl
     rl (hl)
     ret nc
     ld a,(seed)

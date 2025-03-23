@@ -17,29 +17,29 @@ C_times_BDE:
   ld a,b
   ld h,d
   ld l,e
-  sla c \ jr c,mul8_24_1
-  sla c \ jr c,mul8_24_2
-  sla c \ jr c,mul8_24_3
-  sla c \ jr c,mul8_24_4
-  sla c \ jr c,mul8_24_5
-  sla c \ jr c,mul8_24_6
-  sla c \ jr c,mul8_24_7
-  sla c \ ret c
+  sla c     jr c,mul8_24_1
+  sla c     jr c,mul8_24_2
+  sla c     jr c,mul8_24_3
+  sla c     jr c,mul8_24_4
+  sla c     jr c,mul8_24_5
+  sla c     jr c,mul8_24_6
+  sla c     jr c,mul8_24_7
+  sla c     ret c
   ld a,c
   ld h,c
   ld l,c
   ret
 mul8_24_1:
-    add hl,hl \ rla \ rl c \ jr nc,$+7 \ add hl,de \ adc a,b \ jr nc,$+3 \ inc c
+    add hl,hl     rla     rl c     jr nc,$+7     add hl,de     adc a,b     jr nc,$+3     inc c
 mul8_24_2:
-    add hl,hl \ rla \ rl c \ jr nc,$+7 \ add hl,de \ adc a,b \ jr nc,$+3 \ inc c
+    add hl,hl     rla     rl c     jr nc,$+7     add hl,de     adc a,b     jr nc,$+3     inc c
 mul8_24_3:
-    add hl,hl \ rla \ rl c \ jr nc,$+7 \ add hl,de \ adc a,b \ jr nc,$+3 \ inc c
+    add hl,hl     rla     rl c     jr nc,$+7     add hl,de     adc a,b     jr nc,$+3     inc c
 mul8_24_4:
-    add hl,hl \ rla \ rl c \ jr nc,$+7 \ add hl,de \ adc a,b \ jr nc,$+3 \ inc c
+    add hl,hl     rla     rl c     jr nc,$+7     add hl,de     adc a,b     jr nc,$+3     inc c
 mul8_24_5:
-    add hl,hl \ rla \ rl c \ jr nc,$+7 \ add hl,de \ adc a,b \ jr nc,$+3 \ inc c
+    add hl,hl     rla     rl c     jr nc,$+7     add hl,de     adc a,b     jr nc,$+3     inc c
 mul8_24_6:
-    add hl,hl \ rla \ rl c \ jr nc,$+7 \ add hl,de \ adc a,b \ jr nc,$+3 \ inc c
+    add hl,hl     rla     rl c     jr nc,$+7     add hl,de     adc a,b     jr nc,$+3     inc c
 mul8_24_7:
-    add hl,hl \ rla \ rl c \ ret nc \ add hl,de \ adc a,b \ ret nc \ inc c \ ret
+    add hl,hl     rla     rl c     ret nc     add hl,de     adc a,b     ret nc     inc c     ret

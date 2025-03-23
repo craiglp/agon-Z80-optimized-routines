@@ -9,10 +9,10 @@ lg_88:
    ret m
    ld a,l
    jr z,$+8
-   inc b \ srl h \ rra \ jr nz,$-4
-   or a \ jr nz,$+6
-   ld hl,8000h \ ret
-   rra \ inc b \ jr nc,$-2
+   inc b    srl h    rra    jr nz,$-4
+   or a    jr nz,$+6
+   ld hl,8000h    ret
+   rra    inc b    jr nc,$-2
 ;A is the element to look up in the LUT
    ld l,a
     ld c,h

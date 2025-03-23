@@ -10,8 +10,8 @@ arctan_88:
    ld d,a
    dec a
    jr nz,checkneedinv
-   inc e \ dec e \ jr nz,checkneedinv
-   pop af \ rla \ ld de,201 \ ret nc \ ld de,-201 \ ret
+   inc e    dec e    jr nz,checkneedinv
+   pop af    rla    ld de,201    ret nc    ld de,-201    ret
 checkneedinv:
    inc a
    call nz,DEgt1_Inv
@@ -19,15 +19,15 @@ checkneedinv:
    ld hl,adjustatan
    push hl
    ld a,e
-   cp 46 \ ret c
-   dec a \ cp 42h \ ret c
-   dec a \ cp 4Eh \ ret c
-   dec a \ cp 57h \ ret c
-   dec a \ cp 5Eh \ ret c
-   dec a \ cp 64h \ ret c
-   dec a \ cp 6Ah \ ret c
-   dec a \ cp 6Fh \ ret c
-   sub 6Fh \ ld e,a
+   cp 46    ret c
+   dec a    cp 42h    ret c
+   dec a    cp 4Eh    ret c
+   dec a    cp 57h    ret c
+   dec a    cp 5Eh    ret c
+   dec a    cp 64h    ret c
+   dec a    cp 6Ah    ret c
+   dec a    cp 6Fh    ret c
+   sub 6Fh    ld e,a
    ld hl,atanlut
    add hl,de
    ld a,(hl)

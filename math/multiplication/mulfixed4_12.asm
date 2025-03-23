@@ -45,10 +45,10 @@ _:
   ld a,h    ;we'll actually be moving the discared bits into A
   and $F0
   ex de,hl
-  rla \ adc hl,hl
-  rla \ adc hl,hl
-  rla \ adc hl,hl
-  rla \ adc hl,hl
+  rla     adc hl,hl
+  rla     adc hl,hl
+  rla     adc hl,hl
+  rla     adc hl,hl
   adc a,a
 
 ;if A is non-zero, we have overflow

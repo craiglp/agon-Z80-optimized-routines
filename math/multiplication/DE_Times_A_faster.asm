@@ -14,30 +14,30 @@ DE_Times_A:
     ld c,0
     ld h,d
     ld l,e
-    add a,a \ jr c,mul_07
-    rla \ jr c,mul_06
-    rla \ jr c,mul_05
-    rla \ jr c,mul_04
-    rla \ jr c,mul_03
-    rla \ jr c,mul_02
-    rla \ jr c,mul_01
+    add a,a     jr c,mul_07
+    rla     jr c,mul_06
+    rla     jr c,mul_05
+    rla     jr c,mul_04
+    rla     jr c,mul_03
+    rla     jr c,mul_02
+    rla     jr c,mul_01
     rla
     ret c
     ld h,a
     ld l,a
     ret
 mul_07:
-    add hl,hl \ rla \ jr nc,$+4 \ add hl,de \ adc a,c
+    add hl,hl     rla     jr nc,$+4     add hl,de     adc a,c
 mul_06:
-    add hl,hl \ rla \ jr nc,$+4 \ add hl,de \ adc a,c
+    add hl,hl     rla     jr nc,$+4     add hl,de     adc a,c
 mul_05:
-    add hl,hl \ rla \ jr nc,$+4 \ add hl,de \ adc a,c
+    add hl,hl     rla     jr nc,$+4     add hl,de     adc a,c
 mul_04:
-    add hl,hl \ rla \ jr nc,$+4 \ add hl,de \ adc a,c
+    add hl,hl     rla     jr nc,$+4     add hl,de     adc a,c
 mul_03:
-    add hl,hl \ rla \ jr nc,$+4 \ add hl,de \ adc a,c
+    add hl,hl     rla     jr nc,$+4     add hl,de     adc a,c
 mul_02:
-    add hl,hl \ rla \ jr nc,$+4 \ add hl,de \ adc a,c
+    add hl,hl     rla     jr nc,$+4     add hl,de     adc a,c
 mul_01:
-    add hl,hl \ rla \ ret nc \ add hl,de \ adc a,c
+    add hl,hl     rla     ret nc     add hl,de     adc a,c
     ret

@@ -5,20 +5,20 @@ HL_Div_7_round:
     ld d,h
     ld e,l
     ld b,a
-    add hl,hl \ rla
-    add hl,hl \ rla
-    add hl,hl \ rla
-    add hl,de \ adc a,b
+    add hl,hl	rla
+    add hl,hl	rla
+    add hl,hl	rla
+    add hl,de	adc a,b
     ld d,h
     ld e,l
     ld c,a
-    add hl,hl \ rla
-    add hl,hl \ rla   
+    add hl,hl	rla
+    add hl,hl	rla   
     ld d,h
     ld e,l
     ld c,a
-    add hl,hl \ rla
-    add hl,hl \ rla
+    add hl,hl	rla
+    add hl,hl	rla
     ld d,a
     ld d,h
     ld e,l

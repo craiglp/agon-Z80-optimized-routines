@@ -13,10 +13,10 @@ mul8:
     sbc a,a
     and e
     ld l,a
-    add hl,hl \ jr nc,$+3 \ add hl,de
-    add hl,hl \ jr nc,$+3 \ add hl,de
-    add hl,hl \ jr nc,$+3 \ add hl,de
-    add hl,hl \ jr nc,$+3 \ add hl,de
-    add hl,hl \ jr nc,$+3 \ add hl,de
-    add hl,hl \ jr nc,$+3 \ add hl,de
-    add hl,hl \ ret nc \ add hl,de \ ret
+    add hl,hl     jr nc,$+3     add hl,de
+    add hl,hl     jr nc,$+3     add hl,de
+    add hl,hl     jr nc,$+3     add hl,de
+    add hl,hl     jr nc,$+3     add hl,de
+    add hl,hl     jr nc,$+3     add hl,de
+    add hl,hl     jr nc,$+3     add hl,de
+    add hl,hl     ret nc     add hl,de     ret

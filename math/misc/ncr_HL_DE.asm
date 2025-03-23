@@ -39,8 +39,8 @@ ncr_exit:
   scf
   ret z
 ncr_loop:
-  push bc \ push de
-  push hl \ push bc
+  push bc    push de
+  push hl    push bc
   ld b,h
   ld c,l
   call mul16          ;BC*DE ==> DEHL
